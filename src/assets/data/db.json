@@ -1,0 +1,74 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Swaroop Raj",
+      "email": "swaroop1664@gmail.com",
+      "phone": "9177541664",
+      "designation": "GET",
+      "department": "RD I/TBT",
+      "empType": "Full Time"
+    },
+    {
+      "id": 2,
+      "name": "Raj",
+      "email": "Raj@gmail.com",
+      "phone": 3234567890,
+      "designation": "GET",
+      "department": "RD I/TBT",
+      "empType": "Intern"
+    },
+    {
+      "id": 430616199085,
+      "name": "Ravi",
+      "email": "ravi@gmail.com",
+      "phone": "1212121212",
+      "designation": "Manager",
+      "department": "RDI",
+      "empType": "Full Time"
+    },
+    {
+      "id": 103933483880,
+      "name": "Tarun",
+      "email": "tarun123@gmail.com",
+      "phone": "8686767675",
+      "designation": "Senior Software Engineer",
+      "department": "RD I/TBT",
+      "empType": "Full Time"
+    },
+    {
+      "id": 565344726818,
+      "name": "Moin Khan",
+      "email": "moin232@gmail.com",
+      "phone": "8787989867",
+      "designation": "Deputy Manager",
+      "department": "RD I/TBT",
+      "empType": "Full Time"
+    },
+    {
+      "id": 694018132494,
+      "name": "Rahul",
+      "email": "rahul@gmail.com",
+      "phone": "1232123212",
+      "designation": "GET",
+      "department": "Accounting",
+      "empType": "Intern"
+    },
+    {
+      "id": 754718813648,
+      "name": "Kavya",
+      "email": "Kavyashetty123@gmail.com",
+      "phone": "9898767656",
+      "designation": "Manger",
+      "department": "RDI/TBT",
+      "empType": "Full Time"
+    }
+  ],
+  "departments": [
+    {
+      "id": 100,
+      "department-name": "Accounting",
+      "department-size": 20
+    }
+  ]
+}

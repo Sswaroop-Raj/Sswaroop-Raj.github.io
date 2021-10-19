@@ -1,0 +1,31 @@
+<!-- This is the component when the employee clicks the 'Employee' from the homepage navigation bar.-->
+
+<!--This should display/describe all the employee related activities
+
+        1.Add employeee - Add details in a form and submit
+        2.Edit Employee - This should be a button available in the 'View Employee' component
+        3.Delete Employee - Delete by 'id'
+        4.View Employee - View by 'id', should have an 'edit' button
+
+        1,2,3,4 -> Employee Service -> json-server
+-->
+<div class="container">
+    <div class="row">
+        <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+            <ul class="navbar-nav">
+                <div class="divider">|</div>
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink='employee-list' >All Employees</a>
+                </li>
+                
+                <div class="divider">|</div>
+                <li class="nav-item" >
+                    <a class="nav-link" routerLink='add-employee' >
+                        <i class="bi bi-person-plus-fill"></i>&nbsp; Add Employee</a>
+                </li>
+                <div class="divider">|</div>
+            </ul>
+        </nav>
+    </div>
+</div>
+<router-outlet></router-outlet>

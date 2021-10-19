@@ -1,0 +1,27 @@
+1.Create components
+    Navbar, Home, Employee, Department 
+2.Basic HTML template for the page
+    Navbar - done
+    Home - done (about the portal)
+    Employee - done
+3.Routing connection 
+    Default Routing - done
+    Wildcard Routing  -  done
+    Routing to respective components - done
+4.Create child components and child routes within EmployeeComponent
+    Employee List - done
+    Add Employee(Form) - done
+    View Employee List(By id search,  add a button that routes to update component) - done
+    Edit Employee(By id) - done
+    Delete Employee(By id) - done 
+5.Create json-server
+    Add data - done
+    Delete data - done
+    Get data - done
+    Update data - done
+6.Create a service to interact with components and json-server
+    Connect to json-server - done
+    employeeList() using 'GET' method - done
+    addEmployee() using 'POST' method - done
+    updateEmployee() using 'PUT' method -  done
+    deleteEmployee() using 'DELETE' method - done

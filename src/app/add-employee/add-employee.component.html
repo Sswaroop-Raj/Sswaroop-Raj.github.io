@@ -1,0 +1,90 @@
+<!--Child component of employee component-->
+
+<!--
+        1.Track state of form fields
+            Template varialbe for all fields - done
+        2.NgModel vaeiable provides -
+            valid, invalid
+            touched, untouched
+            dirty, pristine
+        3.Provide bootstrap is-invalid class to all fields using ng variables - done
+        4.Visual validation for fields
+            Red text danger class if invalid or errors - done
+        
+-->
+
+    <div class="container container-fluid-mb5" style="width: 50%; height: 50%; position: relative;" >
+
+        <h4 class="add-employee-head">Add Employee</h4>
+        <form class="was-validated" #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" novalidate>
+            <hr>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" name="name" #name="ngModel" ngModel
+                [class.is-invalid]="name.invalid && name.touched" placeholder="Enter name" required>
+
+                <small class="text-danger" [class.d-none]="name.valid || name.untouched">Please enter a valid Name</small>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" name="email" #email="ngModel" ngModel
+                [class.is-invalid]="email.invalid && email.touched" placeholder="Enter email" required>
+
+                <small class="text-danger" [class.d-none]="email.valid || email.untouched">Please enter a valid Email</small>
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" class="form-control" name="phone" pattern="^\d{10}$" #phone="ngModel" ngModel
+                [class.is-invalid]="phone.invalid && phone.touched" placeholder="Enter phone number" required>
+
+                <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
+                    <small class="text-danger" *ngIf="phone.errors.required && phone.touched">Please enter a phone number</small>
+                    <small class="text-danger" *ngIf="phone.errors.pattern">Phone number must have 10 digits</small>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label>Designation</label>
+                <input type="text" class="form-control" name="designation" #designation="ngModel" ngModel
+                [class.is-invalid]="designation.invalid && designation.touched" placeholder="Enter designation" required>
+
+                <small class="text-danger" [class.d-none]="designation.valid || designation.untouched">Please enter a valid Designation</small>
+            </div>
+
+            <div class="form-group">
+                <label>Department</label>
+                <input type="text" class="form-control" name="department" #department="ngModel" ngModel
+                [class.is-invalid]="department.invalid && department.touched" placeholder="Enter department" required>
+
+                <small class="text-danger" [class.d-none]="department.valid || department.untouched">Please enter a valid Department</small>
+            </div>
+
+            <!--Select option has been validated in component-->
+
+            <div class="form-group">
+                <label>Employee Type</label>
+                <div style="padding-top:8px;">
+                    <select style="width:100%;height:40px;border-radius:5px;border:1px solid rgb(179, 176, 176);"
+                    class="custom-select" name="emp" #emp="ngModel" ngModel
+                    (change)="selectOptionValidate(emp.value)"
+                    [class.is-invalid]="selectOptionError && emp.touched" required>
+                        <option value="default" selected>Select</option>
+                        <option *ngFor="let type of empType">{{type}}</option>
+                    </select>
+
+                    <small class="text-danger" [class.d-none]="emp.value!=='default' || emp.untouched">Please select type of Employee</small>
+                </div>
+            </div>
+            <button style="margin-top:10px;margin-left:40%;width:90px;" 
+                class="btn btn-primary active" aria-pressed="true" [disabled]="myForm.invalid" type="submit"><i class="bi bi-plus-lg"></i> Add</button>
+        </form>
+        <!--
+        <div class="alert alert-success" style="text-align:center;width:250px;height:40px;margin-left: 28%;margin-top: 2%"  
+        [class.d-none]="!formSubmitted" role="alert">
+            <h6>Succesfully added Employee</h6>
+        </div>
+        -->
+    </div>

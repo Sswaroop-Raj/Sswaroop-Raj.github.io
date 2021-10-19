@@ -1,0 +1,16 @@
+.divider{
+    font-size: 25px;
+    color: rgb(170, 164, 164);
+
+}
+.nav-link{
+    color: rgb(65, 63, 63);
+}
+.nav-link:hover{
+    color : black;
+}
+
+.container2{
+    padding-top: 20px;
+    text-align: center;
+}
